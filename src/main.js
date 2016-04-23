@@ -20,8 +20,3 @@ sync(store, router)
 router.start(App, '#app')
 // 全局路由
 window.router = router
-
-// var time = 60000 * 30
-// setInterval(function () {
-//   window.localStorage.clear()
-// }, time)
