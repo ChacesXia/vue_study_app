@@ -9,7 +9,7 @@
                 <img src="../../assets/logo.png" width="44"></div>
               <div class="item-inner">
                 <div class="item-title-row">
-                  <div class="item-title">{{courseItem.title}}{{courseItem.id}}</div>
+                  <div class="item-title">{{courseItem.title}}</div>
                 </div>
                 <div class="item-subtitle">{{courseItem.overview}}</div>
               </div>

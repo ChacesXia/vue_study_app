@@ -10,7 +10,8 @@ Vue.use(VueRouter)
 Vue.use(VueResource)
 
 const router = new VueRouter({
-  hashbang: false
+  hashbang: false,
+  history: true
 })
 // 加载路由配置项
 configRouter(router)

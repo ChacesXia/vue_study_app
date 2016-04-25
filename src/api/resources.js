@@ -9,13 +9,16 @@ Vue.use(VueResource)
 // HTTP相关
 Vue.http.options.crossOrigin = true
 // Vue.http.options.xhr = {withCredentials: true}
-
+// Vue.http.setRequestHeader('X-PINGOTHER', 'pingpong')
 Vue.http.interceptors.push({
   request (request) {
+    console.log(request)
     // 这里对请求体进行处理
     request.headers = request.headers || {}
-    if (getCookie('csrftoken')) {
-      request.headers.x_csrftoken = getCookie('csrftoken').replace(/(^\")|(\"$)/g, '')
+    // request.headers['X-CSRFTOKEN'] = 'ffffffsdafd'
+    // request.headers['Content-Type'] = 'text/xml'
+    if (getCookie('sessionid')) {
+      request.headers.sessionid = getCookie('sessionid').replace(/(^\")|(\"$)/g, '')
     }
     return request
   },
