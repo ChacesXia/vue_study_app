@@ -10,7 +10,8 @@ Vue.use(VueRouter)
 Vue.use(VueResource)
 
 const router = new VueRouter({
-  hashbang: false
+  hashbang: false,
+  history: true
 })
 // 加载路由配置项
 configRouter(router)
@@ -20,8 +21,3 @@ sync(store, router)
 router.start(App, '#app')
 // 全局路由
 window.router = router
-
-// var time = 60000 * 30
-// setInterval(function () {
-//   window.localStorage.clear()
-// }, time)
